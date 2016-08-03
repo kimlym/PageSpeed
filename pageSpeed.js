@@ -57,7 +57,7 @@ function runPagespeedCallbacks(result) {
 setTimeout(runPagespeed, 0);
 
 callbacks.displayPageSpeedScore = function(result) {
-  var score = result.score;
+  var score = result.ruleGroups.SPEED.score;
   // Construct the query to send to the Google Chart Tools.
   var query = [
     'chtt=Page+Speed+score:+' + score,
